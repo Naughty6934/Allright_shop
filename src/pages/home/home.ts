@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomeServiceProvider } from "./home.service";
+import { homeModel } from "./home.model";
 
 /**
  * Generated class for the HomePage page.
@@ -13,12 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
+  homeData: homeModel = new homeModel;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public homeServiceProvider:HomeServiceProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+    this.homeServiceProvider.getData().then(data =>{
+ this.homeData = data;
+    })
   }
 
 }
