@@ -54,6 +54,7 @@ import { VideoPlayerModule } from '../components/video-player/video-player.modul
 import { ValidatorsModule } from '../components/validators/validators.module';
 
 import { LanguageService } from '../providers/language/language.service';
+import { TabnavPage } from "../pages/tabnav/tabnav";
 
 export function createTranslateLoader(http: Http) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -72,7 +73,8 @@ export function createTranslateLoader(http: Http) {
     ColorRadio,
     CounterInput,
     Rating,
-    GoogleMap
+    GoogleMap,
+    TabnavPage
   ],
   imports: [
     BrowserModule,
@@ -92,6 +94,7 @@ export function createTranslateLoader(http: Http) {
   entryComponents: [
     MyApp,
     WalkthroughPage,
+    TabnavPage
   ],
   providers: [
     // GoogleMapsService,

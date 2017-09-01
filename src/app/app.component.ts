@@ -12,6 +12,7 @@ import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 // import { FunctionalitiesPage } from '../pages/functionalities/functionalities';
 
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { TabnavPage } from "../pages/tabnav/tabnav";
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make WalkthroughPage the root (or first) page
-  rootPage: any = WalkthroughPage;
+  rootPage: any = TabnavPage;
   // rootPage: any = FunctionalitiesPage;
   // rootPage: any = TabsNavigationPage;
   textDir: string = "ltr";
