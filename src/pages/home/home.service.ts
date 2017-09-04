@@ -16,11 +16,11 @@ export class HomeServiceProvider {
   constructor(public http: Http) {
     console.log('Hello HomeServiceProvider Provider');
   }
-  getData(): Promise <homeModel> {
+  getData(): Promise<homeModel> {
     return this.http.get('../../assets/json/home.json')
-    .toPromise()
-    .then( resp => resp.json() as homeModel)
-    .catch(err => err.reject(err.message || err));
-   }
+      .toPromise()
+      .then(resp => resp.json() as homeModel)
+      .catch(err => Promise.reject(err.message || err));
+  }
 
 }

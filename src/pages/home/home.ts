@@ -17,13 +17,13 @@ import { homeModel } from "./home.model";
 export class HomePage {
   homeData: homeModel = new homeModel;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public homeServiceProvider:HomeServiceProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public homeServiceProvider: HomeServiceProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.homeServiceProvider.getData().then(data =>{
- this.homeData = data;
+    this.homeServiceProvider.getData().then(data => {
+      this.homeData = data;
     })
   }
 
