@@ -24,6 +24,7 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
     this.homeServiceProvider.getData().then(data => {
       this.homeData = data;
+      console.log(data);
     })
   }
 

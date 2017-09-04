@@ -46,10 +46,24 @@ TabnavPageModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return homeModel; });
+/* unused harmony export ProductItemModel */
+/* unused harmony export ShopItemModel */
 var homeModel = (function () {
     function homeModel() {
     }
     return homeModel;
+}());
+
+var ProductItemModel = (function () {
+    function ProductItemModel() {
+    }
+    return ProductItemModel;
+}());
+
+var ShopItemModel = (function () {
+    function ShopItemModel() {
+    }
+    return ShopItemModel;
 }());
 
 //# sourceMappingURL=home.model.js.map
@@ -96,6 +110,7 @@ var HomePage = (function () {
         console.log('ionViewDidLoad HomePage');
         this.homeServiceProvider.getData().then(function (data) {
             _this.homeData = data;
+            console.log(data);
         });
     };
     return HomePage;
@@ -103,7 +118,7 @@ var HomePage = (function () {
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/allright_shop/Allright_shop/src/pages/home/home.html"*/'<!--\n  Generated template for the HomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/allright_shop/Allright_shop/src/pages/home/home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/allright_shop/Allright_shop/src/pages/home/home.html"*/'<!--\n  Generated template for the HomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  \n\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/allright_shop/Allright_shop/src/pages/home/home.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__home_service__["a" /* HomeServiceProvider */]])
 ], HomePage);
